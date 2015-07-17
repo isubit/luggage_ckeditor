@@ -57,10 +57,9 @@ cd DRUPAL_ROOT/sites/all/modules
 
 git clone https://github.com/ISUITC/luggage_ckeditor.git
 
-cp -a luggage_ckeditor/resources/ckeditor ../libraries/
+cp -a luggage_ckeditor/resources/ckeditor ../../libraries/
 
-drush en ckeditor_config
-			
+drush en luggage_ckeditor
 
 Dependencies
 ----------------
