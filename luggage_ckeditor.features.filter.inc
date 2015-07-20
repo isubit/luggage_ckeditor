@@ -131,7 +131,7 @@ table[align|width|height|border|cellpadding|cellspacing],tr,td[align|width|heigh
 br,span,em,strong,cite,code,blockquote,ul,ol,li,dl,dt,dd,
 h2,h3,br,hr,div,p,
 address,sub,sup,
-figure[class],figcaption',
+figure[class|style],figcaption',
           'allow_comments' => 0,
           'nofollow_policy' => 'disabled',
           'nofollow_domains' => array(),
