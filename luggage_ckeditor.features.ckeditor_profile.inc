@@ -29,10 +29,6 @@ function luggage_ckeditor_ckeditor_profile_defaults() {
       'name' => 'WYSIWYG',
       'settings' => array(
         'ss' => 2,
-        'default' => 't',
-        'show_toggle' => 'f',
-        'uicolor' => 'default',
-        'uicolor_user' => '#025C0E',
         'toolbar' => '[
     [\'PasteText\',\'PasteFromWord\'],
     [\'Table\',\'HorizontalRule\'],
@@ -45,10 +41,16 @@ function luggage_ckeditor_ckeditor_profile_defaults() {
     [\'Image\']
 ]',
         'expand' => 't',
+        'default' => 't',
+        'show_toggle' => 'f',
+        'uicolor' => 'default',
+        'uicolor_user' => '#025C0E',
         'width' => '100%',
         'lang' => 'en',
         'auto_lang' => 't',
         'language_direction' => 'default',
+        'allowed_content' => 't',
+        'extraAllowedContent' => '',
         'enter_mode' => 'p',
         'shift_enter_mode' => 'br',
         'font_format' => 'p;h2;h3',
@@ -78,13 +80,6 @@ function luggage_ckeditor_ckeditor_profile_defaults() {
         'theme_config_js' => 'f',
         'js_conf' => 'config.extraPlugins = \'image2\';',
         'loadPlugins' => array(
-          'confighelper' => array(
-            'name' => 'confighelper',
-            'desc' => 'Configuration helper plugin for CKEditor',
-            'path' => '%plugin_dir%confighelper/',
-            'buttons' => FALSE,
-            'default' => 'f',
-          ),
           'drupalbreaks' => array(
             'name' => 'drupalbreaks',
             'desc' => 'Plugin for inserting Drupal teaser and page breaks.',
