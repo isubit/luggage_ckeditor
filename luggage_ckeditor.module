@@ -13,3 +13,12 @@ function luggage_ckeditor_update_projects_alter(&$projects) {
   // Hide a site-specific module from the list.
   unset($projects['luggage_ckeditor']);
 }
+
+/**
+ * Implements hook_form_alter().
+ */
+function luggage_ckeditor_form_alter(&$form, &$form_state, $form_id) {
+  if (strpos($form_id, 'node_form') !== FALSE) {
+    drupal_add_js(drupal_get_path('module', 'luggage_ckeditor') . '/luggage_ckeditor.js', array('defer' => TRUE));
+  }
+}

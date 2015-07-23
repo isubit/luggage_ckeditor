@@ -24,12 +24,11 @@ Full html - admin/config/content/formats/full_html
 - This text format is installed with the standard profile and is highly abused so I have encluded it so it is reset and unused.
 
 ckeditor config changes:
-- The ckeditor config can not be changed without altering the config file in so hacking the module.  Would like the module developers to provide a way to override without hacking core.
 - I have altered the config to remove the "url" field from the image properties dialog so that users can not include images from othe domains.
 - The only way to include an image is to use the insert module.
 - I have also removed the image properties advanced dialogue tab as I do not want users to had classes or ID ...
 - Users can not escape from the ckeditor and edit source.
-- The plugins directory was cleared of all pluggins except Drupal-Break and confighelper
+- [Image2](http://ckeditor.com/addon/image2) plugin has been added for image caption support.
 
 Principles:
 
@@ -42,7 +41,7 @@ Simple
 
 Included
 ================
-ckeditor drupal module with adjusted config file and plugins
+resources/ckeditor library and plugins.
 
 luggage_ckeditor Drupal feature
 
@@ -56,18 +55,15 @@ cd DRUPAL_ROOT/sites/all/modules
 
 git clone https://github.com/ISUITC/luggage_ckeditor.git
 
-cd DRUPAL_ROOT/sites/all/libraries
+cp -a luggage_ckeditor/resources/ckeditor ../../libraries/
 
-git clone https://github.com/ckeditor/ckeditor-releases.git -b 4.2.x/full ckeditor
-
-drush en ckeditor_config
-			
+drush en luggage_ckeditor
 
 Dependencies
 ----------------
 
 - better_formats
-- ckeditor - included as the config and plugins directory have been modified
+- ckeditor
 - features
 - image - core
 - image_resize_filter
