@@ -24,10 +24,10 @@
         // Get a reference to the 'image Info' tab.
         //  this part does not work!!!
         //  If I can get it working we can remove the confighelper plugin
-        //var infoTab = dialogDefinition.getContents( 'info' );
+        var infoTab = dialogDefinition.getContents( 'info' );
 
         // Remove unnecessary widgets from the 'image Info' tab.
-        //infoTab.remove( 'txturl');
+        infoTab.remove( 'txtAlt');
     }
   });
 })(jQuery);
